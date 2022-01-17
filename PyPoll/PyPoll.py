@@ -27,18 +27,19 @@ with open(csvpath) as csvfile:
         cand.append(row[2])
 
 for name in cand:  
-    if name not in uniq_cand:
-        uniq_cand.append(name)
+    if name not in uniqcand:
+        uniqcand.append(name)
     elif name == 'Khan':
         khanvote += 1
     elif name == 'Correy':
         correyvote += 1
     elif name == 'Li':
         livote += 1                      
-    else otooleyvote += 1
-    
+    elif name == 'OTeeley':
+        otooleyvote += 1    
+
+
 winningcount = max(votetally)
-    
 winner = uniqcand[votetally.index(winningcount)]
 
 print(uniqcand)
@@ -55,9 +56,11 @@ print(f"Total Votes: {count}")
 print("--------------------")  
 print(f"Khan: {round((khanvote/count)*100, 2)}% ({khanvote})")
 print(f"Correy: {round((correyvote/count)*100, 2)}% ({correyvote})")
-print(f"Li: {round((Livote/count)*100, 2)}% ({Livote})")
+print(f"Li: {round((livote/count)*100, 2)}% ({livote})")
 print(f"O'Tooley: {round((otooleyvote/count)*100, 2)}% ({otooleyvote})")
-
+print("--------------------")
+print(f"Winner: {winner})")
+print("--------------------")
 
 
 
