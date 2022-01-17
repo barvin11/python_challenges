@@ -35,9 +35,9 @@ for name in cand:
         correyvote += 1
     elif name == 'Li':
         livote += 1                      
-    elif name == 'OTeeley':
-        otooleyvote += 1    
-
+    #elif name == 'OTooley':     #Currently not picking up O'Tooleyvote print.
+    #    otooleyvote += 1
+    else: otooleyvote += 1
 
 winningcount = max(votetally)
 winner = uniqcand[votetally.index(winningcount)]
